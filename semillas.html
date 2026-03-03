@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semillas - Mas Semillas</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body class="catalog-page">
+  <nav class="site-header fixed z-50 top-4 left-1/2 -translate-x-1/2 w-full max-w-6xl px-4">
+    <div class="site-header__shell flex items-center justify-between bg-black/80 backdrop-blur-xl border border-white/50 rounded-full px-6 py-3 shadow-xl">
+      <a href="index.html" class="flex items-center">
+        <img src="img/logo mas semillas.png" alt="Mas Semillas" class="h-12 w-auto">
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
+        <a href="index.html#home" class="nav-link relative text-white/80 hover:text-white transition-colors">Inicio
+          <span class="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-red-600 transition-all duration-300"></span>
+        </a>
+        <a href="index.html#products" class="nav-link active relative text-white/80 hover:text-white transition-colors">Productos
+          <span class="absolute bottom-0 left-1/2 h-[2px] w-full -translate-x-1/2 bg-red-600 transition-all duration-300"></span>
+        </a>
+        <a href="index.html#services" class="nav-link relative text-white/80 hover:text-white transition-colors">Servicios
+          <span class="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-red-600 transition-all duration-300"></span>
+        </a>
+        <a href="index.html#team" class="nav-link relative text-white/80 hover:text-white transition-colors">Equipo
+          <span class="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-red-600 transition-all duration-300"></span>
+        </a>
+        <a href="index.html#contact" class="nav-link relative text-white/80 hover:text-white transition-colors">Contacto
+          <span class="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-red-600 transition-all duration-300"></span>
+        </a>
+      </div>
+
+      <a href="index.html#contact" class="hidden md:inline-flex items-center gap-2 px-4 py-3 bg-red-600 text-white text-sm font-semibold rounded-full hover:bg-red-700 transition-all">
+        CONTACTANOS
+      </a>
+
+      <button type="button" class="mobile-nav-toggle" data-mobile-toggle aria-expanded="false" aria-label="Abrir menu">
+        <svg class="mobile-nav-toggle__open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+        <svg class="mobile-nav-toggle__close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-backdrop" data-mobile-backdrop></div>
+
+    <div class="mobile-nav-panel" data-mobile-menu>
+      <a href="index.html#home" class="mobile-nav-link">Inicio</a>
+      <a href="index.html#products" class="mobile-nav-link">Productos</a>
+      <a href="index.html#services" class="mobile-nav-link">Servicios</a>
+      <a href="index.html#team" class="mobile-nav-link">Equipo</a>
+      <a href="index.html#contact" class="mobile-nav-link">Contacto</a>
+      <a href="index.html#contact" class="mobile-nav-cta">Consultar Ahora</a>
+    </div>
+  </nav>
+
+  <section class="catalog-page__hero">
+    <a href="index.html#products" class="catalog-page__back">&larr; Volver al inicio</a>
+    <h1 class="catalog-page__title">SEMILLAS</h1>
+  </section>
+
+  <section class="catalog-search" data-catalog-search>
+      <div class="catalog-search__bar">
+        <div class="catalog-search__field">
+          <label class="catalog-search__label" for="catalog-search-input">Buscar en el catalogo</label>
+          <div class="catalog-search__input-wrap">
+            <svg class="catalog-search__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              id="catalog-search-input"
+              class="catalog-search__input"
+              type="search"
+              placeholder="Buscar productos..."
+              autocomplete="off"
+              data-catalog-search-input
+            >
+          </div>
+        </div>
+      </div>
+      <p class="catalog-search__meta" aria-live="polite">
+        <strong data-catalog-search-count>0</strong> productos visibles
+      </p>
+      <p class="catalog-search__empty" data-catalog-search-empty hidden>No encontramos productos con ese criterio. Proba otra palabra.</p>
+  </section>
+
+  <section class="catalog-page__grid">
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Soja MS 501</h3><p>Ciclo intermedio largo, excelente estabilidad.</p><span class="catalog-item__tag">Soja</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Soja MS 420</h3><p>Alta performance en ambientes de media-larga.</p><span class="catalog-item__tag">Soja</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1601593768792-18f1af2d75e4?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Maiz AX 782</h3><p>Excelente potencial en siembras tempranas.</p><span class="catalog-item__tag">Maiz</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Maiz AX 690</h3><p>Gran adaptacion y buen comportamiento sanitario.</p><span class="catalog-item__tag">Maiz</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Trigo TR 112</h3><p>Calidad comercial superior y alto techo.</p><span class="catalog-item__tag">Trigo</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Trigo TR 94</h3><p>Muy buena sanidad foliar y rendimiento estable.</p><span class="catalog-item__tag">Trigo</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1472043730010-89c8f7824b2f?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Girasol GS 310</h3><p>Excelente comportamiento en zonas mixtas.</p><span class="catalog-item__tag">Girasol</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1444731961956-75134d95e9ee?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Girasol GS 277</h3><p>Buen contenido de aceite y sanidad de capitulo.</p><span class="catalog-item__tag">Girasol</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Sorgo SG 88</h3><p>Tolerancia a estres hidrico y uniformidad.</p><span class="catalog-item__tag">Sorgo</span></div></article>
+    <article class="catalog-item"><div class="catalog-item__img" style="background-image:url('https://images.unsplash.com/photo-1530507629858-e4977d30e4f8?auto=format&fit=crop&w=600&q=80');"></div><div class="catalog-item__body"><h3>Sorgo SG 73</h3><p>Material versatil para silaje y grano.</p><span class="catalog-item__tag">Sorgo</span></div></article>
+  </section>
+
+  <!-- CHAT BOT FAQ -->
+  <div class="faq-bot" data-faq-bot>
+    <button type="button" class="faq-bot__toggle" data-faq-toggle aria-expanded="false" aria-controls="faq-bot-panel" aria-label="Abrir chat de preguntas frecuentes">
+      <img src="img/bot mas semillas.png" alt="" class="faq-bot__toggle-image" aria-hidden="true">
+    </button>
+
+    <section id="faq-bot-panel" class="faq-bot__panel" data-faq-panel aria-label="Chat de preguntas frecuentes" hidden>
+      <header class="faq-bot__header">
+        <div>
+          <p class="faq-bot__eyebrow">Asistente Mas Semillas</p>
+          <h3>Preguntas Frecuentes</h3>
+        </div>
+        <button type="button" class="faq-bot__close" data-faq-close aria-label="Cerrar chat">x</button>
+      </header>
+
+      <div class="faq-bot__messages" data-faq-messages></div>
+
+      <div class="faq-bot__questions" data-faq-questions>
+        <button type="button" data-faq-question="horarios">Cuales son los horarios de atencion?</button>
+        <button type="button" data-faq-question="productos">Que productos ofrecen?</button>
+        <button type="button" data-faq-question="envios">Hacen envios a campo?</button>
+        <button type="button" data-faq-question="asesoramiento">Brindan asesoramiento tecnico?</button>
+        <button type="button" data-faq-question="contacto">Como me contacto rapido?</button>
+      </div>
+    </section>
+  </div>
+
+  <footer id="site-footer" class="footer-compact">
+    <div class="footer-compact__wrap">
+      <div class="footer-compact__top">
+        <a href="index.html" class="footer-compact__brand" aria-label="Mas Semillas">
+          <img src="img/logo mas semillas.png" alt="Mas Semillas">
+          <span>Sembrando confianza en cada campana</span>
+        </a>
+
+        <div class="footer-compact__right">
+          <div class="footer-compact__contact-bar" aria-label="Datos de contacto">
+            <a href="tel:+543414567890">+54 341 456-7890</a>
+            <a href="mailto:info@massemillas.com.ar">info@massemillas.com.ar</a>
+            <span>Arroyo Seco, Santa Fe</span>
+          </div>
+
+          <div class="footer-compact__socials">
+            <a href="https://instagram.com/msemillas.redin.nidera" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://wa.me/5493413045521" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9z"></path>
+                <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-compact__bottom">
+        <p>Â© 2026 MAS SEMILLAS - CRISMAN JUAN BAUTISTA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const nav = document.querySelector('nav');
+      const toggle = nav?.querySelector('[data-mobile-toggle]');
+      const menu = nav?.querySelector('[data-mobile-menu]');
+      const backdrop = nav?.querySelector('[data-mobile-backdrop]');
+
+      if (toggle && menu && backdrop) {
+        const openMenu = () => {
+          menu.classList.add('is-open');
+          backdrop.classList.add('is-open');
+          document.body.classList.add('menu-open');
+          toggle.setAttribute('aria-expanded', 'true');
+        };
+
+        const closeMenu = () => {
+          menu.classList.remove('is-open');
+          backdrop.classList.remove('is-open');
+          document.body.classList.remove('menu-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        };
+
+        toggle.addEventListener('click', () => {
+          const isOpen = menu.classList.contains('is-open');
+          if (isOpen) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        backdrop.addEventListener('click', closeMenu);
+        menu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', closeMenu);
+        });
+      }
+
+      const searchRoot = document.querySelector('[data-catalog-search]');
+      const searchInput = searchRoot?.querySelector('[data-catalog-search-input]');
+      const resultsCount = searchRoot?.querySelector('[data-catalog-search-count]');
+      const emptyState = searchRoot?.querySelector('[data-catalog-search-empty]');
+      const catalogItems = Array.from(document.querySelectorAll('.catalog-page__grid .catalog-item'));
+
+      if (searchRoot && searchInput && resultsCount && emptyState && catalogItems.length) {
+        const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+
+        const indexedItems = catalogItems.map((item) => {
+          const title = item.querySelector('h3')?.textContent ?? '';
+          const description = item.querySelector('p')?.textContent ?? '';
+          const tag = item.querySelector('.catalog-item__tag')?.textContent ?? '';
+          return {
+            item,
+            searchableText: normalize(`${title} ${description} ${tag}`)
+          };
+        });
+
+        const applyFilter = () => {
+          const query = normalize(searchInput.value);
+          let visible = 0;
+
+          indexedItems.forEach(({ item, searchableText }) => {
+            const isMatch = !query || searchableText.includes(query);
+            item.classList.toggle('is-hidden', !isMatch);
+            if (isMatch) visible += 1;
+          });
+
+          resultsCount.textContent = String(visible);
+          emptyState.hidden = visible !== 0;
+        };
+
+        searchInput.addEventListener('input', applyFilter);
+
+        applyFilter();
+      }
+
+      // FAQ chatbot
+      const faqBot = document.querySelector('[data-faq-bot]');
+      const faqToggle = faqBot?.querySelector('[data-faq-toggle]');
+      const faqClose = faqBot?.querySelector('[data-faq-close]');
+      const faqPanel = faqBot?.querySelector('[data-faq-panel]');
+      const faqMessages = faqBot?.querySelector('[data-faq-messages]');
+      const faqQuestions = faqBot?.querySelector('[data-faq-questions]');
+
+      if (faqBot && faqToggle && faqClose && faqPanel && faqMessages && faqQuestions) {
+        const faqAnswers = {
+          horarios: 'Atendemos de lunes a viernes de 8:00 a 18:00 y sabados de 8:00 a 13:00.',
+          productos: 'Trabajamos con semillas y agroquimicos de marcas lideres, con stock y recomendacion segun tu lote.',
+          envios: 'Si, coordinamos entregas en Arroyo Seco y zona para que tengas el producto a tiempo.',
+          asesoramiento: 'Si, brindamos asesoramiento tecnico personalizado en cada etapa de la campana.',
+          contacto: 'Podes escribirnos por WhatsApp al +54 9 341 304-5521 o por mail a info@massemillas.com.ar.'
+        };
+
+        const appendMessage = (text, type) => {
+          const bubble = document.createElement('p');
+          bubble.className = `faq-bot__message faq-bot__message--${type}`;
+          bubble.textContent = text;
+          faqMessages.appendChild(bubble);
+          faqMessages.scrollTop = faqMessages.scrollHeight;
+        };
+
+        const openFaq = () => {
+          faqPanel.hidden = false;
+          faqPanel.classList.add('is-open');
+          faqToggle.setAttribute('aria-expanded', 'true');
+          if (!faqMessages.dataset.initialized) {
+            appendMessage('Hola, soy el asistente de Mas Semillas. Elegi una pregunta y te respondo al instante.', 'bot');
+            faqMessages.dataset.initialized = 'true';
+          }
+        };
+
+        const closeFaq = () => {
+          faqPanel.classList.remove('is-open');
+          faqToggle.setAttribute('aria-expanded', 'false');
+          setTimeout(() => {
+            if (!faqPanel.classList.contains('is-open')) {
+              faqPanel.hidden = true;
+            }
+          }, 180);
+        };
+
+        faqToggle.addEventListener('click', () => {
+          const isOpen = faqPanel.classList.contains('is-open');
+          if (isOpen) {
+            closeFaq();
+          } else {
+            openFaq();
+          }
+        });
+
+        faqClose.addEventListener('click', closeFaq);
+
+        faqQuestions.addEventListener('click', (event) => {
+          const btn = event.target.closest('[data-faq-question]');
+          if (!btn) return;
+
+          const key = btn.getAttribute('data-faq-question');
+          const questionText = btn.textContent?.trim() || '';
+          const answer = faqAnswers[key];
+          if (!answer) return;
+
+          faqMessages.innerHTML = '';
+          appendMessage(questionText, 'user');
+
+          setTimeout(() => {
+            appendMessage(answer, 'bot');
+          }, 260);
+        });
+      }
+
+    });
+  </script>
+</body>
+</html>
+
+
