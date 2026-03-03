@@ -3557,7 +3557,7 @@ body {
 .team-showcase__title {
   margin: 0.7rem 0 0;
   color: #ffffff;
-  font-size: clamp(2.15rem, 4.8vw, 4.4rem);
+  font-size: clamp(1.15rem, 4.8vw, 4.4rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
   font-weight: 800;
@@ -4522,6 +4522,7 @@ body.menu-open .faq-bot {
     word-break: break-word;
   }
 }
+
 
 @media (max-width: 420px) {
   .faq-bot__panel {
